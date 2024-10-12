@@ -31,30 +31,26 @@
     height: 75px;
     width: 100%;
 }
-
 .menu__lista {
     display: flex;
     justify-content: space-around;
     height: 100%;
 }
-
 .menu__lista li {
     align-self: center;
 }
-
 .menu__itens {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-
 .menu__lista:nth-child(2),
 .menu__lista:nth-child(3),
 .menu__lista:nth-child(4) {
     display: none;
 }
 
-@media (min-width: 834px ) {
+@media (min-width: 834px) {
     /* Cabecera */
     .cabecera__buscar__item {
         display: block;
@@ -77,4 +73,41 @@
         padding-top: 16px;
         gap: 33px;
     }
+}
+
+@media (min-width: 1440px) {
+    /* Menu */
+    .menu__container {
+        width: 239px;
+        overflow: scroll;
+    }
+    .menu__lista {
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        gap: 15px;
+    }
+    .menu__lista:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+        display: flex;
+    }
+    .menu__itens {
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+    }
+    .videojuegos {
+        order: 3;
+    }
+    .peliculas {
+        order: 2;
+    }
+    .premium {
+        order: 1;
+    }
+
 }
